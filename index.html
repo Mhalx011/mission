@@ -295,8 +295,7 @@
     <button class="btn-next" onclick="goToNiveau()">ENTRER DANS LES BACKROOMS →</button>
   </div>
   <nav class="bottom-nav">
-    <button class="nav-btn active" onclick="showTab('perso')"><span class="nav-icon">🧍</span>PERSO</button>
-    <button class="nav-btn" onclick="showTab('niveau')"><span class="nav-icon">🌀</span>NIVEAU 1</button>
+<button class="nav-btn" id="perso-nav-btn" onclick="showTab('perso')"><span class="nav-icon">🧍</span>PERSO</button>
   </nav>
 </div>
 
@@ -398,8 +397,7 @@
 </div>
   </div>
   <nav class="bottom-nav">
-    <button class="nav-btn" onclick="showTab('perso')"><span class="nav-icon">🧍</span>PERSO</button>
-    <button class="nav-btn active" onclick="showTab('niveau')"><span class="nav-icon">🌀</span>NIVEAU 1</button>
+<button class="nav-btn" id="perso-nav-btn" onclick="showTab('perso')"><span class="nav-icon">🧍</span>PERSO</button>
   </nav>
 </div>
 
@@ -563,7 +561,13 @@
 
   function goToRules() { show('rules'); }
   function goToPerso() { show('perso'); }
-  function goToNiveau() { show('niveau'); }
+function goToNiveau() {
+  show('niveau');
+  const btn = document.getElementById('perso-nav-btn');
+  btn.style.pointerEvents = 'none';
+  btn.style.opacity = '0.3';
+  btn.onclick = null;
+}
 
   function show(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
