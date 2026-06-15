@@ -311,7 +311,7 @@
   <div class="niveau-content pb">
     <span class="niveau-badge">NIVEAU 1</span>
     <div class="mission-card">
-      <div class="mission-card-title">🦆 Mission — Le canard de R.E.P.O</div>
+      <div class="mission-card-title">Le canard</div>
       <div class="mission-card-desc">Suis les instructions du carnet pour placer le canard à l'endroit indiqué dans le décor des Backrooms.</div>
       <div class="mission-done">
         <input type="checkbox" id="m1" onchange="missionDone('m1')" />
@@ -325,10 +325,77 @@
       <button class="btn-next" style="margin-top:0.5rem;" onclick="validateNiveauCode()">VALIDER</button>
       <div id="code-error" style="color:var(--red);font-family:var(--mono);font-size:0.72rem;margin-top:0.5rem;display:none;">⚠ Code incorrect — vie perdue !</div>
     </div>
-    <div class="mission-card" style="border-color:#333; opacity:0.5;">
-      <div class="mission-card-title" style="color:var(--muted);">🔒 Niveau 2 — Bientôt disponible</div>
-      <div class="mission-card-desc">Ce niveau sera débloqué plus tard...</div>
-    </div>
+  <div class="mission-card" id="mission2-card" style="display:none;">
+  <div class="mission-card-title">🛝 Le toboggan</div>
+  <div class="mission-card-desc">Suis les instructions du carnet pour la deuxième mission.</div>
+  <div class="mission-done">
+    <input type="checkbox" id="m2" onchange="missionDone2('m2')" />
+    <label for="m2">Mission accomplie</label>
+  </div>
+</div>
+<div class="mission-card" id="code-card2" style="display:none; border-color: var(--yellow);">
+  <div class="mission-card-title" style="color:var(--yellow);">🔐 Code secret du niveau</div>
+  <div class="mission-card-desc">Entre le code secret que tu as trouvé dans le carnet.</div>
+  <input type="text" id="niveau-code2" placeholder="Code caché..." style="width:100%;background:#000;border:1px solid #333;color:var(--yellow);font-family:var(--mono);padding:0.5rem 0.75rem;margin-top:0.75rem;outline:none;letter-spacing:3px;" />
+  <button class="btn-next" style="margin-top:0.5rem;" onclick="validateNiveauCode2()">VALIDER</button>
+  <div id="code-error2" style="color:var(--red);font-family:var(--mono);font-size:0.72rem;margin-top:0.5rem;display:none;">⚠ Code incorrect — vie perdue !</div>
+</div><div class="mission-card" id="mission2-card" style="display:none;">
+  <div class="mission-card-title">🛝 Le toboggan</div>
+  <div class="mission-card-desc">Suis les instructions du carnet pour la deuxième mission.</div>
+  <div class="mission-done">
+    <input type="checkbox" id="m2" onchange="missionDone2('m2')" />
+    <label for="m2">Mission accomplie</label>
+  </div>
+</div>
+<div class="mission-card" id="code-card2" style="display:none; border-color: var(--yellow);">
+  <div class="mission-card-title" style="color:var(--yellow);">🔐 Code secret du niveau</div>
+  <div class="mission-card-desc">Entre le code secret que tu as trouvé dans le carnet.</div>
+  <input type="text" id="niveau-code2" placeholder="Code caché..." style="width:100%;background:#000;border:1px solid #333;color:var(--yellow);font-family:var(--mono);padding:0.5rem 0.75rem;margin-top:0.75rem;outline:none;letter-spacing:3px;" />
+  <button class="btn-next" style="margin-top:0.5rem;" onclick="validateNiveauCode2()">VALIDER</button>
+  <div id="code-error2" style="color:var(--red);font-family:var(--mono);font-size:0.72rem;margin-top:0.5rem;display:none;">⚠ Code incorrect — vie perdue !</div>
+</div><div class="mission-card" id="mission2-card" style="display:none;">
+  <div class="mission-card-title">🛝 Le toboggan</div>
+  <div class="mission-card-desc">Suis les instructions du carnet pour la deuxième mission.</div>
+  <div class="mission-done">
+    <input type="checkbox" id="m2" onchange="missionDone2('m2')" />
+    <label for="m2">Mission accomplie</label>
+  </div>
+</div>
+<div class="mission-card" id="code-card2" style="display:none; border-color: var(--yellow);">
+  <div class="mission-card-title" style="color:var(--yellow);">🔐 Code secret du niveau</div>
+  <div class="mission-card-desc">Entre le code secret que tu as trouvé dans le carnet.</div>
+  <input type="text" id="niveau-code2" placeholder="Code caché..." style="width:100%;background:#000;border:1px solid #333;color:var(--yellow);font-family:var(--mono);padding:0.5rem 0.75rem;margin-top:0.75rem;outline:none;letter-spacing:3px;" />
+  <button class="btn-next" style="margin-top:0.5rem;" onclick="validateNiveauCode2()">VALIDER</button>
+  <div id="code-error2" style="color:var(--red);font-family:var(--mono);font-size:0.72rem;margin-top:0.5rem;display:none;">⚠ Code incorrect — vie perdue !</div>
+</div><div class="mission-card" id="mission2-card" style="display:none;">
+  <div class="mission-card-title">🛝 Le toboggan</div>
+  <div class="mission-card-desc">Suis les instructions du carnet pour la deuxième mission.</div>
+  <div class="mission-done">
+    <input type="checkbox" id="m2" onchange="missionDone2('m2')" />
+    <label for="m2">Mission accomplie</label>
+  </div>
+</div>
+<div class="mission-card" id="code-card2" style="display:none; border-color: var(--yellow);">
+  <div class="mission-card-title" style="color:var(--yellow);">🔐 Code secret du niveau</div>
+  <div class="mission-card-desc">Entre le code secret que tu as trouvé dans le carnet.</div>
+  <input type="text" id="niveau-code2" placeholder="Code caché..." style="width:100%;background:#000;border:1px solid #333;color:var(--yellow);font-family:var(--mono);padding:0.5rem 0.75rem;margin-top:0.75rem;outline:none;letter-spacing:3px;" />
+  <button class="btn-next" style="margin-top:0.5rem;" onclick="validateNiveauCode2()">VALIDER</button>
+  <div id="code-error2" style="color:var(--red);font-family:var(--mono);font-size:0.72rem;margin-top:0.5rem;display:none;">⚠ Code incorrect — vie perdue !</div>
+</div><div class="mission-card" id="mission2-card" style="display:none;">
+  <div class="mission-card-title">🛝 Le toboggan</div>
+  <div class="mission-card-desc">Suis les instructions du carnet pour la deuxième mission.</div>
+  <div class="mission-done">
+    <input type="checkbox" id="m2" onchange="missionDone2('m2')" />
+    <label for="m2">Mission accomplie</label>
+  </div>
+</div>
+<div class="mission-card" id="code-card2" style="display:none; border-color: var(--yellow);">
+  <div class="mission-card-title" style="color:var(--yellow);">🔐 Code secret du niveau</div>
+  <div class="mission-card-desc">Entre le code secret que tu as trouvé dans le carnet.</div>
+  <input type="text" id="niveau-code2" placeholder="Code caché..." style="width:100%;background:#000;border:1px solid #333;color:var(--yellow);font-family:var(--mono);padding:0.5rem 0.75rem;margin-top:0.75rem;outline:none;letter-spacing:3px;" />
+  <button class="btn-next" style="margin-top:0.5rem;" onclick="validateNiveauCode2()">VALIDER</button>
+  <div id="code-error2" style="color:var(--red);font-family:var(--mono);font-size:0.72rem;margin-top:0.5rem;display:none;">⚠ Code incorrect — vie perdue !</div>
+</div>
   </div>
   <nav class="bottom-nav">
     <button class="nav-btn" onclick="showTab('perso')"><span class="nav-icon">🧍</span>PERSO</button>
@@ -339,6 +406,7 @@
 <script>
   const SECRET = 'courgette';
   const NIVEAU1_CODE = 'A';
+  const NIVEAU2_CODE = 'R';
   let lives = 3;
   let isMuted = false;
   let currentVolume = 20;
@@ -519,12 +587,34 @@
     }
   }
 
-  function validateNiveauCode() {
+  function validateNiveauCode() {function missionDone2(id) {
+  const checked = document.getElementById(id).checked;
+  if (checked) {
+    document.getElementById('code-card2').style.display = 'block';
+    document.getElementById('code-card2').scrollIntoView({ behavior: 'smooth' });
+  } else {
+    document.getElementById('code-card2').style.display = 'none';
+  }
+}
+
+function validateNiveauCode2() {
+  const val = document.getElementById('niveau-code2').value.toUpperCase().trim();
+  const err = document.getElementById('code-error2');
+  if (val === NIVEAU2_CODE) {
+    document.getElementById('code-card2').innerHTML = '<div style="color:var(--green);font-family:var(--mono);font-size:0.85rem;text-align:center;padding:0.5rem;">✓ MISSION 2 VALIDÉE — BIEN JOUÉ !</div>';
+  } else {
+    lives = Math.max(0, lives - 1);
+    updateLives();
+    err.style.display = 'block';
+    document.getElementById('niveau-code2').value = '';
+    setTimeout(() => err.style.display = 'none', 3000);
+  }
+}
     const val = document.getElementById('niveau-code').value.toUpperCase().trim();
     const err = document.getElementById('code-error');
     if (val === NIVEAU1_CODE) {
       document.getElementById('code-card').innerHTML = '<div style="color:var(--green);font-family:var(--mono);font-size:0.85rem;text-align:center;padding:0.5rem;">✓ NIVEAU 1 VALIDÉ — BIEN JOUÉ !</div>';
-    } else {
+    document.getElementById('mission2-card').style.display = 'block';} else {
       lives = Math.max(0, lives - 1);
       updateLives();
       err.style.display = 'block';
