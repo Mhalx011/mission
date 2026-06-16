@@ -580,15 +580,7 @@ function goToNiveau() {
   show('niveau');
   document.querySelector('.bottom-nav').style.display = 'none';
 }
-
-  show('niveau');
-  const btn = document.getElementById('perso-nav-btn');
-  btn.style.pointerEvents = 'none';
-  btn.style.opacity = '0.3';
-  btn.onclick = null;
-}
-
-  function show(id) {
+ function show(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
   }
