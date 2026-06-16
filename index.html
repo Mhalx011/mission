@@ -278,7 +278,7 @@
   <div class="equip-item" onclick="selectEquip(this,'casque','https://media.discordapp.net/attachments/1499817989950668881/1516517175941398629/Sans_titre_106_20260616200104.png?ex=6a32ee2e&is=6a319cae&hm=167391bf391850812452ca7b6f92db3b057cb94b418cf7456d1704ba3524ab59&=&format=webp&quality=lossless&width=648&height=864')"><img src="https://media.discordapp.net/attachments/1499817989950668881/1516517175941398629/Sans_titre_106_20260616200104.png?ex=6a32ee2e&is=6a319cae&hm=167391bf391850812452ca7b6f92db3b057cb94b418cf7456d1704ba3524ab59&=&format=webp&quality=lossless&width=648&height=864" style="width:48px;height:48px;object-fit:contain;" /><br>Masque à gaz</div>
   <div class="equip-item" onclick="selectEquip(this,'casque','https://media.discordapp.net/attachments/1499817989950668881/1516517177002557560/Sans_titre_106_20260616201040.png?ex=6a32ee2e&is=6a319cae&hm=c5355dcd8d48ca8cf733728a274fbb18257cc945cff2747bee8cb7aeab524f42&=&format=webp&quality=lossless&width=648&height=864')"><img src="https://media.discordapp.net/attachments/1499817989950668881/1516517177002557560/Sans_titre_106_20260616201040.png?ex=6a32ee2e&is=6a319cae&hm=c5355dcd8d48ca8cf733728a274fbb18257cc945cff2747bee8cb7aeab524f42&=&format=webp&quality=lossless&width=648&height=864" style="width:48px;height:48px;object-fit:contain;" /><br>Papier WC</div>
 </div>
-      </div>
+      </div><button onclick="desequiper('casque')" style="margin-top:0.5rem;background:none;border:1px solid #444;color:#888;font-family:var(--mono);font-size:0.65rem;letter-spacing:2px;padding:4px 10px;cursor:pointer;border-radius:4px;">✕ DÉSÉQUIPER</button>
     </div>
     <div class="equip-section">
       <div class="equip-label">⬡ HAUT</div>
@@ -578,6 +578,10 @@
   function goToPerso() { show('perso'); }
 function goToNiveau() {
   show('niveau');
+  document.querySelector('.bottom-nav').style.display = 'none';
+}
+
+  show('niveau');
   const btn = document.getElementById('perso-nav-btn');
   btn.style.pointerEvents = 'none';
   btn.style.opacity = '0.3';
@@ -590,7 +594,13 @@ function goToNiveau() {
   }
 
   function showTab(id) { show(id); }
-
+function desequiper(category) {
+  if (category === 'casque') {
+    document.getElementById('layer-casque').style.display = 'none';
+    document.getElementById('layer-casque').src = '';
+  }
+  document.querySelectorAll('.equip-grid .equip-item').forEach(i => i.classList.remove('selected'));
+}
 function selectEquip(el, category, imgSrc) {
   el.closest('.equip-grid').querySelectorAll('.equip-item').forEach(i => i.classList.remove('selected'));
   el.classList.add('selected');
