@@ -7,14 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Creepster&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0a0a; --bg2: #111; --bg3: #181818;
-    --yellow: #f5c518; --yellow2: #ffd84d;
-    --red: #c0392b; --green: #1db954;
-    --purple: #9b59b6; --purple2: #7d3c98;
-    --text: #e8e8e0; --muted: #888; --border: #2a2a2a;
-    --mono: 'Share Tech Mono', monospace;
-    --display: 'Creepster', cursive;
-    --body: 'Nunito', sans-serif;
+  --bg: #0a0008; --bg2: #110010; --bg3: #1a0018;
+--yellow: #9b59b6; --yellow2: #c39bd3;
+--purple: #7d3c98; --purple2: #6c3483;
+--border: #3d0050;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -186,7 +182,28 @@
   background: #1a1a1a; border: 1px solid #333; border-radius: 8px;
   padding: 6px 12px; font-family: var(--mono); font-size: 0.7rem;
   color: var(--yellow); letter-spacing: 2px;
+}body {
+  background-image: 
+    radial-gradient(ellipse at top, #1a0030 0%, #0a0008 60%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239b59b6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
+.login-box, .music-box, .rules-box {
+  border: 1px solid #5b0080;
+  box-shadow: 0 0 30px rgba(100,0,150,0.4), inset 0 0 30px rgba(50,0,80,0.3);
+}
+.mission-card, .rule-item, .song-item, .equip-item {
+  border-color: #3d0050;
+  box-shadow: inset 0 0 10px rgba(80,0,100,0.2);
+}
+.mission-card:hover, .rule-item:hover, .song-item:hover {
+  border-color: #9b59b6;
+  box-shadow: 0 0 15px rgba(155,89,182,0.4);
+}
+.login-title, .rules-title, .music-title, .perso-title, .niveau-title {
+  text-shadow: 0 0 20px rgba(155,89,182,0.8), 0 0 40px rgba(100,0,150,0.5);
+}
+.btn-next:hover, .btn-purple:hover {
+  box-shadow: 0 0 20px
 </style>
 </head>
 <body>
