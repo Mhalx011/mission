@@ -11,6 +11,11 @@
 --yellow: #9b59b6; --yellow2: #c39bd3;
 --purple: #7d3c98; --purple2: #6c3483;
 --border: #3d0050;
+    --text: #e8e8e0; --muted: #aaa; --border: #3d0050;
+    .login-title, .rules-title, .music-title, .perso-title, .niveau-title {
+  text-shadow: 0 0 20px rgba(200,150,255,1), 0 0 40px rgba(155,89,182,0.8);
+  color: #d4a8ff;
+}
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -243,7 +248,7 @@
 .thorn-right {
   position: fixed; right: 0; top: 0;
   width: 180px; height: 100vh;
-  pointer-events: none; z-index: 9996; opacity: 0.15;
+  pointer-events: none; z-index: 9996; opacity: 0.05;
   transform-origin: top right;
   animation: sway2 7s ease-in-out infinite;
 }
