@@ -661,18 +661,20 @@ function validateNiveauCode2() {
     setTimeout(() => err.style.display = 'none', 3000);
   }
 }
-    const val = document.getElementById('niveau-code').value.toUpperCase().trim();
-    const err = document.getElementById('code-error');
-    if (val === NIVEAU1_CODE) {
-      document.getElementById('code-card').innerHTML = '<div style="color:var(--green);font-family:var(--mono);font-size:0.85rem;text-align:center;padding:0.5rem;">✓ NIVEAU 1 VALIDÉ — BIEN JOUÉ !</div>';
-    document.getElementById('mission2-card').style.display = 'block';} else {
-      lives = Math.max(0, lives - 1);
-      updateLives();
-      err.style.display = 'block';
-      document.getElementById('niveau-code').value = '';
-      setTimeout(() => err.style.display = 'none', 3000);
-    }
+function validateNiveauCode() {
+  const val = document.getElementById('niveau-code').value.toUpperCase().trim();
+  const err = document.getElementById('code-error');
+  if (val === NIVEAU1_CODE) {
+    document.getElementById('code-card').innerHTML = '<div style="color:var(--green);font-family:var(--mono);font-size:0.85rem;text-align:center;padding:0.5rem;">✓ NIVEAU 1 VALIDÉ — BIEN JOUÉ !</div>';
+    document.getElementById('mission2-card').style.display = 'block';
+  } else {
+    lives = Math.max(0, lives - 1);
+    updateLives();
+    err.style.display = 'block';
+    document.getElementById('niveau-code').value = '';
+    setTimeout(() => err.style.display = 'none', 3000);
   }
+}
 
   function updateLives() {
     const el = document.getElementById('lives-display');
