@@ -225,6 +225,28 @@
   width: 20px; height: 20px;
   filter: drop-shadow(0 0 4px rgba(155,89,182,0.8));
 }
+  @keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(8deg); }
+}
+@keyframes sway2 {
+  0%, 100% { transform: rotate(0deg) scaleX(-1); }
+  50% { transform: rotate(-8deg) scaleX(-1); }
+}
+.thorn-left {
+  position: fixed; left: 0; top: 0;
+  width: 180px; height: 100vh;
+  pointer-events: none; z-index: 9996; opacity: 0.15;
+  transform-origin: top left;
+  animation: sway 6s ease-in-out infinite;
+}
+.thorn-right {
+  position: fixed; right: 0; top: 0;
+  width: 180px; height: 100vh;
+  pointer-events: none; z-index: 9996; opacity: 0.15;
+  transform-origin: top right;
+  animation: sway2 7s ease-in-out infinite;
+}
 </style>
 </head>
 <body>
@@ -735,5 +757,40 @@ function validateNiveauCode() {
 })();
 </script>
   <div id="butterflies"></div>
+  <svg class="thorn-left" viewBox="0 0 180 800" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 0 C30 100 10 200 40 300 C60 380 20 450 50 550 C70 620 30 700 60 800" stroke="#9b59b6" stroke-width="3" fill="none"/>
+  <path d="M50 50 C20 80 5 60 10 40" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="8" cy="38" r="4" fill="#7d3c98"/>
+  <path d="M35 150 C10 170 0 150 5 130" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="3" cy="128" r="4" fill="#7d3c98"/>
+  <path d="M45 250 C70 270 80 250 75 230" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="77" cy="228" r="4" fill="#7d3c98"/>
+  <path d="M30 350 C5 370 0 355 8 335" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="6" cy="333" r="4" fill="#7d3c98"/>
+  <path d="M55 450 C80 470 85 450 78 430" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="80" cy="428" r="4" fill="#7d3c98"/>
+  <path d="M40 550 C15 570 5 555 12 535" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="10" cy="533" r="4" fill="#7d3c98"/>
+  <path d="M60 650 C85 670 90 655 82 635" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="84" cy="633" r="4" fill="#7d3c98"/>
+  <path d="M0 0 C40 50 0 120 30 180 C50 230 10 280 40 340" stroke="#6c3483" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>
+
+<svg class="thorn-right" viewBox="0 0 180 800" xmlns="http://www.w3.org/2000/svg">
+  <path d="M160 0 C150 100 170 200 140 300 C120 380 160 450 130 550 C110 620 150 700 120 800" stroke="#9b59b6" stroke-width="3" fill="none"/>
+  <path d="M130 50 C160 80 175 60 170 40" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="172" cy="38" r="4" fill="#7d3c98"/>
+  <path d="M145 150 C170 170 180 150 175 130" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="177" cy="128" r="4" fill="#7d3c98"/>
+  <path d="M135 250 C110 270 100 250 105 230" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="103" cy="228" r="4" fill="#7d3c98"/>
+  <path d="M150 350 C175 370 180 355 172 335" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="174" cy="333" r="4" fill="#7d3c98"/>
+  <path d="M125 450 C100 470 95 450 102 430" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="100" cy="428" r="4" fill="#7d3c98"/>
+  <path d="M140 550 C165 570 175 555 168 535" stroke="#9b59b6" stroke-width="2" fill="none"/>
+  <circle cx="170" cy="533" r="4" fill="#7d3c98"/>
+  <path d="M180 0 C140 50 180 120 150 180 C130 230 170 280 140 340" stroke="#6c3483" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>
 </body>
 </html>
