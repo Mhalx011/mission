@@ -596,14 +596,11 @@
     }
   }
 
-  function selectSong(el, mp3file) {
-    document.querySelectorAll('.song-item').forEach(i => i.classList.remove('selected'));
-    el.classList.add('selected');
-    const nowPlaying = document.getElementById('now-playing');
-    nowPlaying.style.display = 'flex';
-    document.getElementById('now-playing-name').textContent = el.querySelector('.song-name').textContent;
-    playYoutube(mp3file);
-  }
+function selectSong(el, mp3file) {
+  document.querySelectorAll('.song-item').forEach(i => i.classList.remove('selected'));
+  el.classList.add('selected');
+  playYoutube(mp3file);
+}
 
   function togglePause(e) {
     e.stopPropagation();
