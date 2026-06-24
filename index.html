@@ -325,6 +325,9 @@
     <div class="perso-character">
       <img src="https://media.discordapp.net/attachments/1499817989950668881/1516517178185093291/Sans_titre_106_20260616180641.png?ex=6a32ee2e&is=6a319cae&hm=83b1ff4701c3ca8229041d829181be4760dd10db957877b4efec62ab4a08d40f&=&format=webp&quality=lossless&width=648&height=864" id="base-perso" />
       <img src="" id="layer-casque" style="display:none;" />
+<img src="" id="layer-haut" style="display:none;" />
+<img src="" id="layer-bas" style="display:none;" />
+      <img src="" id="layer-casque" style="display:none;" />
     </div>
   </div>
   <div class="perso-right">
@@ -656,6 +659,18 @@ function selectEquip(el, category, imgSrc) {
     const layer = document.getElementById('layer-casque');
     layer.src = imgSrc;
     layer.style.display = 'block';
+  }
+  if (category === 'haut') {
+    const layer = document.getElementById('layer-haut');
+    layer.src = imgSrc;
+    layer.style.display = 'block';
+  }
+  if (category === 'bas') {
+    const layer = document.getElementById('layer-bas');
+    layer.src = imgSrc;
+    layer.style.display = 'block';
+  }
+}
   }
 }
 
